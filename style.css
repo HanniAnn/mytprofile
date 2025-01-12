@@ -1,0 +1,193 @@
+:root {
+            --background-color: #000000;
+            --text-color: #fff;
+            --highlight-color: #febd01;
+            --box-shadow: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            width: 80%;
+            padding: 20px 10%;
+            background-color: var(--background-color);
+            box-shadow: 0 4px 8px var(--box-shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .nav-logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        header .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        header .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 18px;
+            position: relative;
+        }
+
+        header .nav-links a:hover::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--highlight-color);
+        }
+
+        .home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+        }
+
+        .home video {
+            position: fixed; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw; 
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(40%); 
+        }
+
+        .home-content {
+            position: relative;
+            max-width: 600px;
+            border-left: 4px solid var(--highlight-color);
+            padding-left: 50px;
+            z-index: 1;
+            color: rgb(255, 255, 255);
+        }
+
+        .home-content h6 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .home-content h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .home-content h3 {
+            font-size: 24px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .home-content .cv-btn a {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text-color);
+            border: 1px solid var(--text-color);
+            border-radius: 5px;
+            padding: 12px 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .home-content .cv-btn a:hover {
+            background-color: var(--text-color);
+            color: var(--background-color);
+        }
+
+        .about-me {
+            padding: 100px 5%;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-me .img {
+            flex: 1;
+        }
+
+        .about-me .img img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-me .text {
+            flex: 2;
+        }
+
+        .about-me .text h4 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .about-me .text h6 {
+            font-size: 20px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .about-me .text p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .social-media-sidebar {
+            position: fixed;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-media-sidebar a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px;
+            border: 2px solid var(--text-color);
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .social-media-sidebar a:hover {
+            background-color: var(--highlight-color);
+        }
+
+        .programming-languages {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.programming-languages h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.programming-languages .icons img {
+    vertical-align: middle;
+}
+html {
+    scroll-behavior: smooth;
+}
